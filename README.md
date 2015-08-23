@@ -1,8 +1,8 @@
-# Chain
+# Middleware Chain
   
   Chain your node.js functions.
 
-  Chain allows you to simply chain your syncronous / asyncronous middleware functions. It works in a very similar way to how express handles middleware.
+  Middleware Chain allows you to simply chain your syncronous / asyncronous middleware functions. It works in a very similar way to how express handles middleware.
 
   Works really well using the [https://www.npmjs.com/package/consign](consign) module to autoload your scripts.
 
@@ -13,7 +13,7 @@ chain([context], chain);
 ```
 
 ```js
-var chain = require('chain');
+var chain = require('middleware-chain');
 
 chain([ one, two, three ]);
 
@@ -27,7 +27,7 @@ Please check out the [examples](examples) or [test folder](test) for more!
 ## Installation
 
 ```bash
-$ npm install chain
+$ npm install middleware-chain
 ```
 
 ## Features
@@ -38,6 +38,7 @@ $ npm install chain
   * Allows modifiable flow
   * Ability to pass in initial context
   * Chains are nestable
+  * Ability for parrallel chains
   * Test driven
   * Fast, Light-weight with no external dependencies
 
@@ -61,6 +62,8 @@ $ npm install chain
 ## Full Example
 
 ```js
+var chain = require('middleware-chain');
+
 function one(context, next) {
   setTimeout(function() {
     context.one = 'Hello';

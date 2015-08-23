@@ -1,5 +1,5 @@
 /*!
- * Chain.
+ * Middleware Chain.
  * Basic async example usage.
  *
  * @author Jarrad Seers <jarrad@seers.me>

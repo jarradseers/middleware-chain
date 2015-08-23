@@ -1,6 +1,6 @@
 /*!
  * Middleware Chain.
- * Nested async example usage.
+ * Basic parallel chain example usage.
  *
  * @author Jarrad Seers <jarrad@seers.me>
  * @created 23/08/2015
@@ -29,7 +29,6 @@ function one(context, next) {
 /**
  * Function Two.
  * Example function, logs 'hello' and currect context.
- * Calls a new nested chain.
  *
  * @param {Object} context Current context object.
  * @param {Function} next Next middleware in chain.
@@ -39,7 +38,6 @@ function two(context, next) {
   setTimeout(function() {
     context.two = 'Hello';
     console.log('Hello from two', context);
-    chain({ nested: 'Hello' }, [ one, three ]);
     return next();
   }, 1000);
 }
@@ -59,5 +57,7 @@ function three(context, next) {
   }, 1000);
 }
 
-// Chain all three functions, passes in initial context.
-chain({ main: 'Hello' }, [ one, two, three ]);
+// Chain all three functions.
+chain([ one, two, three ]);
+// Run a new chain in parallel.
+chain([ one, two, three ]);

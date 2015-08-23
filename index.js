@@ -1,5 +1,5 @@
 /*!
- * Chain.
+ * Middleware Chain.
  * Main application entry.
  *
  * @author Jarrad Seers <jarrad@seers.me>
@@ -8,7 +8,7 @@
  */
 
 // Module dependencies.
-var chain = require(__dirname + '/lib/chain');
+var middlewareChain = require(__dirname + '/lib/middleware-chain');
 
-// Return chain lib.
-module.exports = chain;
+// Return middleware chain lib.
+module.exports = middlewareChain;

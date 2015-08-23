@@ -1,5 +1,5 @@
 /*!
- * Chain.
+ * Middleware Chain.
  * Nested async example usage.
  *
  * @author Jarrad Seers <jarrad@seers.me>
@@ -113,7 +113,7 @@ describe('Context', function() {
 
 });
 
-describe('Chain', function() {
+describe('Middleware Chain', function() {
 
   it("should error when passed in a function", function() {
     return assert.throws(function() {
