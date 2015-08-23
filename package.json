@@ -1,0 +1,23 @@
+{
+  "name": "chain",
+  "version": "1.0.0",
+  "description": " Chain your node.js middleware / functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "chain",
+    "middleware",
+    "async",
+    "asyncronous",
+    "sync",
+    "syncronous"
+  ],
+  "author": "Jarrad Seers <jarrad@seers.me>",
+  "repository": "git@github.com:jarradseers/chain.git",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
