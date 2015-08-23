@@ -18,6 +18,7 @@
   "repository": "git@github.com:jarradseers/middleware-chain.git",
   "license": "MIT",
   "devDependencies": {
+    "consign": "^0.1.1",
     "mocha": "^2.2.5"
   }
 }

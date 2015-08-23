@@ -62,7 +62,9 @@ $ npm install middleware-chain
 ## Full Example
 
 ```js
-var chain = require('middleware-chain');
+var chain = require('middleware-chain')
+  , app = { main: 'Hello' }
+;
 
 function one(context, next) {
   setTimeout(function() {
@@ -87,15 +89,15 @@ function three(context, next) {
   }, 1000);
 }
 
-chain([ one, two, three ]);
+chain(app, [ one, two, three ]);
 ```
 
 ### Output
 
 ```bash
-Hello from one
-Hello from two
-Hello from three
+Hello from one, { main: 'Hello', one: 'Hello' }
+Hello from two, { main: 'Hello', one: 'Hello', two: 'Hello' }
+Hello from three, { main: 'Hello', one: 'Hello', two: 'Hello', three: 'Hello' }
 ```
 
 ## License
