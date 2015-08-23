@@ -4,7 +4,7 @@
  *
  * @author Jarrad Seers <jarrad@seers.me>
  * @created 23/08/2015
- * @licence MIT
+ * @license MIT
  */
 
 // Module dependencies.
