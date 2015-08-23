@@ -4,7 +4,7 @@
 
   Middleware Chain allows you to simply chain your syncronous / asyncronous middleware functions. It works in a very similar way to how express handles middleware.
 
-  Works really well using the [https://www.npmjs.com/package/consign](consign) module to autoload your scripts.
+  Works really well using the [consign](https://www.npmjs.com/package/consign) module to autoload your scripts.
 
 ## Usage
 
