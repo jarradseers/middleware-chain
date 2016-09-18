@@ -20,5 +20,8 @@
   "devDependencies": {
     "consign": "^0.1.1",
     "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "array-flatten": "^2.1.0"
   }
 }

@@ -158,3 +158,14 @@ describe('Middleware Chain', function() {
 
 });
 
+// Flatten Test
+describe('Flatten Test',function () {
+  it("should work with nested arrays",function (done) {
+    chain([one, [two], [two,three], function(context, next) {
+      assert.deepEqual(context, {
+        one: 'Hello', two: 'Hello', three: 'Hello'
+      });
+      done();
+    }]);
+  })
+})
