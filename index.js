@@ -7,8 +7,4 @@
  * @license MIT
  */
 
-// Module dependencies.
-var middlewareChain = require(__dirname + '/lib/middleware-chain');
-
-// Return middleware chain lib.
-module.exports = middlewareChain;
+module.exports = require('./lib/middleware-chain');
